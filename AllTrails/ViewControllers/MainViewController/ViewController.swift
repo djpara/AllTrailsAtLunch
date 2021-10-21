@@ -65,7 +65,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configureSearchBar()
         configureLocationTracking()
         configureMapView()
@@ -75,6 +74,7 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        configureSearchBarRightView()
         loadNearbyRestaurants()
     }
 
@@ -85,10 +85,6 @@ class ViewController: UIViewController {
         searchBar.layer.cornerRadius = 8
         searchBar.searchTextField.backgroundColor = .clear
         searchBar.searchTextField.leftView = nil
-        searchBar.searchTextField.rightViewMode = .always
-        searchBar.searchTextField.rightView = magnifyingGlassView
-        searchBar.setNeedsLayout()
-        searchBar.layoutIfNeeded()
         searchBar.delegate = self
         
         let toolbar = UIToolbar()
@@ -97,6 +93,11 @@ class ViewController: UIViewController {
         toolbar.items = [space, doneButton]
         toolbar.sizeToFit()
         searchBar.inputAccessoryView = toolbar
+    }
+    
+    private func configureSearchBarRightView() {
+        searchBar.searchTextField.rightView = magnifyingGlassView
+        searchBar.searchTextField.rightViewMode = .unlessEditing
     }
     
     private func configureLocationTracking() {
@@ -182,4 +183,8 @@ class ViewController: UIViewController {
         guard !viewModel.restaurants.value.all.isEmpty else { return }
         tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
     }
+}
+
+class CustomSearchBar: UISearchBar {
+    
 }
