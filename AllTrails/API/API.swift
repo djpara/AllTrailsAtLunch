@@ -14,10 +14,10 @@ enum APIKeys {
 enum APIEndpoint: String {
     private static let path = "https://maps.googleapis.com/maps/api/place"
     
-    case nearby = "nearbysearch"
+    case nearby = "nearbysearch/json"
     case photo
     
     func path() -> String {
-        "https://maps.googleapis.com/maps/api/place/\(rawValue)/json"
+        "https://maps.googleapis.com/maps/api/place/\(rawValue)"
     }
 }
