@@ -62,6 +62,9 @@ class ViewController: UIViewController {
     
     var viewModel = ViewControllerViewModel()
     var locationManager: CLLocationManager = .init()
+    var currentRadius: Int {
+        Int(mapView.currentRadius())
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -140,12 +143,14 @@ class ViewController: UIViewController {
     
     private func loadNearbyRestaurants() {
         guard let location = locationManager.location else { return }
-        viewModel.loadNearbyRestaurants(for: location, searchKeyword: searchBar.text)
+        viewModel.loadNearbyRestaurants(for: location, radius: currentRadius, searchKeyword: searchBar.text)
     }
     
     private func addPin(for restaurant: Restaurant) {
         let location = restaurant.geometry.location.toCLLocation()
         let pin = MKPointAnnotation()
+        pin.title = restaurant.name
+        pin.subtitle = restaurant.starRating
         pin.coordinate = location.coordinate
         
         DispatchQueue.main.async {

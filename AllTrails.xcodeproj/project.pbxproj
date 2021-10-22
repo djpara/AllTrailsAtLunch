@@ -13,6 +13,7 @@
 		4B393E382721F568009D862D /* UIImageView+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B393E372721F568009D862D /* UIImageView+Networking.swift */; };
 		4B393E3A2721FD7D009D862D /* FavoritesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B393E392721FD7D009D862D /* FavoritesService.swift */; };
 		4B393E4027220A23009D862D /* ViewController+RestaurantTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B393E3F27220A23009D862D /* ViewController+RestaurantTableViewCellDelegate.swift */; };
+		4B393E4227224B88009D862D /* MKMapView+Radius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B393E4127224B88009D862D /* MKMapView+Radius.swift */; };
 		4B48320B272119FF00FDC8E0 /* ViewController+SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B48320A272119FF00FDC8E0 /* ViewController+SearchBar.swift */; };
 		4B48320D27211A2900FDC8E0 /* ViewController+MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B48320C27211A2900FDC8E0 /* ViewController+MapView.swift */; };
 		4B48320F27211A5500FDC8E0 /* ViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B48320E27211A5500FDC8E0 /* ViewController+TableView.swift */; };
@@ -65,6 +66,7 @@
 		4B393E372721F568009D862D /* UIImageView+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Networking.swift"; sourceTree = "<group>"; };
 		4B393E392721FD7D009D862D /* FavoritesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesService.swift; sourceTree = "<group>"; };
 		4B393E3F27220A23009D862D /* ViewController+RestaurantTableViewCellDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+RestaurantTableViewCellDelegate.swift"; sourceTree = "<group>"; };
+		4B393E4127224B88009D862D /* MKMapView+Radius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+Radius.swift"; sourceTree = "<group>"; };
 		4B48320A272119FF00FDC8E0 /* ViewController+SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+SearchBar.swift"; sourceTree = "<group>"; };
 		4B48320C27211A2900FDC8E0 /* ViewController+MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+MapView.swift"; sourceTree = "<group>"; };
 		4B48320E27211A5500FDC8E0 /* ViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+TableView.swift"; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 				4B8173EB2720FB3300DC61D0 /* UIColor+Palette.swift */,
 				4B8173EE2720FCE900DC61D0 /* UIButton+Designable.swift */,
 				4B393E372721F568009D862D /* UIImageView+Networking.swift */,
+				4B393E4127224B88009D862D /* MKMapView+Radius.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -543,6 +546,7 @@
 				4B393E4027220A23009D862D /* ViewController+RestaurantTableViewCellDelegate.swift in Sources */,
 				4B5F39812720E8800094E328 /* AppDelegate.swift in Sources */,
 				4B483213272122C500FDC8E0 /* RestaurantsService.swift in Sources */,
+				4B393E4227224B88009D862D /* MKMapView+Radius.swift in Sources */,
 				4B5F398B2720E8800094E328 /* AllTrails.xcdatamodeld in Sources */,
 				4B393E3A2721FD7D009D862D /* FavoritesService.swift in Sources */,
 				4B393E312721B94F009D862D /* ViewControllerViewModel.swift in Sources */,

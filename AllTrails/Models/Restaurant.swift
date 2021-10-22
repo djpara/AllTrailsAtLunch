@@ -23,6 +23,24 @@ class Restaurant: Codable {
         }
     }
     
+    enum Stars: Int {
+        case one = 1
+        case two
+        case three
+        case four
+        case five
+        
+        var stringValue: String {
+            switch self {
+            case .one: return "★☆☆☆☆"
+            case .two: return "★★☆☆☆"
+            case .three: return "★★★☆☆"
+            case .four: return "★★★★☆"
+            case .five: return "★★★★★"
+            }
+        }
+    }
+    
     struct Geometry: Codable {
         struct Location: Codable {
             var lat: Double
@@ -69,5 +87,12 @@ class Restaurant: Codable {
                   return "$"
               }
         return cost.stringValue
+    }
+    var starRating: String {
+        guard let rating = rating,
+            let starRating = Stars(rawValue: Int(rating)) else {
+            return "★☆☆☆☆"
+        }
+        return starRating.stringValue
     }
 }

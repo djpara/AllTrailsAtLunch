@@ -23,8 +23,8 @@ class ViewControllerViewModel {
         self.favoritesService = favoritesService
     }
     
-    func loadNearbyRestaurants(for location: CLLocation, searchKeyword: String? = nil) {
-        service.fetchRestaurants(latitude: location.coordinate.longitude, longitude: location.coordinate.latitude, searchKeyword: searchKeyword)
+    func loadNearbyRestaurants(for location: CLLocation, radius: Int, searchKeyword: String? = nil) {
+        service.fetchRestaurants(latitude: location.coordinate.longitude, longitude: location.coordinate.latitude, radius: radius, searchKeyword: searchKeyword)
             .sink { [weak self] completion in
                 if case .failure(let error) = completion {
                     self?.restaurants.send(completion: completion)

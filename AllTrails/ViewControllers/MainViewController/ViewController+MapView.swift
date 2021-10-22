@@ -9,6 +9,12 @@ import MapKit
 
 extension ViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        print("selected pin \(view)")
+        let restaurant = viewModel.restaurants.value.all
+            .first { restaurant in
+                let restaurantCoordinate = restaurant.geometry.location.toCLLocation().coordinate
+                return restaurantCoordinate.latitude == view.annotation?.coordinate.latitude &&
+                restaurantCoordinate.longitude == view.annotation?.coordinate.longitude
+            }
+        print(restaurant)
     }
 }

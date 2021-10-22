@@ -18,7 +18,7 @@ class RestaurantTableViewCell: UITableViewCell {
     static let ID = "RestaurantTableViewCellID"
     static let NAME = "RestaurantTableViewCell"
     
-    @IBOutlet weak var restaurantImage: UIImageView!
+    @IBOutlet private weak var restaurantImage: UIImageView!
     @IBOutlet private weak var borderView: UIView!
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var ratingStackView: UIStackView!

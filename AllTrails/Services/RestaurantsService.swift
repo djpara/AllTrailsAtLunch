@@ -17,11 +17,11 @@ class RestaurantsService {
     
     private var nearby = "/nearbysearch/json?location=-33.8670522,151.1957362&radius=500&types=food&name=harbour&key=\(APIKeys.places)"
     
-    func fetchRestaurants(latitude: Double, longitude: Double, searchKeyword: String?) -> AnyPublisher<Restaurants, ServiceError> {
+    func fetchRestaurants(latitude: Double, longitude: Double, radius: Int, searchKeyword: String?) -> AnyPublisher<Restaurants, ServiceError> {
         Future { promise in
-            var parameters = [
+            var parameters: [String: Any] = [
                 "location": "\(longitude),\(latitude)",
-                "radius": "500",
+                "radius": radius,
                 "type": "restaurant",
                 "key": APIKeys.places
             ]
