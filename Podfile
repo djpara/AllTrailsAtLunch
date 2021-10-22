@@ -6,7 +6,7 @@ target 'AllTrails' do
   use_frameworks!
 
   # Pods for AllTrails
-  # pod 'Alamofire', '~> 5.4'
+  pod 'Alamofire', '~> 5.4'
 
   target 'AllTrailsTests' do
     inherit! :search_paths
