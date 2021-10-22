@@ -67,6 +67,9 @@
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didTapFilterButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="HfW-DZ-Iv9"/>
+                                                </connections>
                                             </button>
                                             <searchBar contentMode="redraw" placeholder="Search for a restaurant" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6E-4S-EhZ">
                                                 <rect key="frame" x="73" y="0.0" width="269" height="44"/>
@@ -119,7 +122,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="didTapListMapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9aa-Xx-lPt"/>
+                                    <action selector="didTapListMapButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="hrK-hl-uPW"/>
                                 </connections>
                             </button>
                         </subviews>

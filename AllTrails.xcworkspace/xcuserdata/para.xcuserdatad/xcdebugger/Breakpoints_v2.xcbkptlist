@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F470902D-70AE-4003-8BA9-A94B4D4E67EF"
-            shouldBeEnabled = "Yes"
+            uuid = "305280BB-3FAB-4B3E-9054-6E704D95028E"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AllTrails/Services/RestaurantsService.swift"
+            filePath = "AllTrails/ViewModels/ViewControllerViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "fetchRestaurants(latitude:longitude:radius:searchKeyword:)"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "filterByFavorites()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

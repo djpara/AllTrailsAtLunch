@@ -11,6 +11,10 @@ import MapKit
 import UIKit
 
 class ViewController: UIViewController {
+    enum Filter {
+        case favorite
+    }
+    
     @IBOutlet private weak var searchBar: UISearchBar!
     @IBOutlet private weak var filterButton: UIButton!
     @IBOutlet private weak var tableView: UITableView!
@@ -59,6 +63,7 @@ class ViewController: UIViewController {
     }()
     
     private var pins = [MKPointAnnotation]()
+    private var filters = [Filter]()
     
     var viewModel = ViewControllerViewModel()
     var locationManager: CLLocationManager = .init()
@@ -168,7 +173,17 @@ class ViewController: UIViewController {
         searchBar.resignFirstResponder()
     }
     
-    @IBAction private func didTapListMapButton(_ sender: Any) {
+    @IBAction func didTapFilterButton() {
+        if filters.contains(.favorite) {
+            filters.removeAll { $0 == .favorite }
+            loadNearbyRestaurants()
+        } else {
+            filters.append(.favorite)
+            viewModel.filterByFavorites()
+        }
+    }
+    
+    @IBAction func didTapListMapButton() {
         showMapView.toggle()
     }
     
