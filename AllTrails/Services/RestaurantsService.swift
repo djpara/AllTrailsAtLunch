@@ -22,7 +22,7 @@ class RestaurantsService {
             var parameters = [
                 "location": "\(longitude),\(latitude)",
                 "radius": "500",
-                "types": "food",
+                "type": "restaurant",
                 "key": APIKeys.places
             ]
             
