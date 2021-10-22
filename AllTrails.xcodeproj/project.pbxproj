@@ -304,7 +304,6 @@
 				4B5F39792720E8800094E328 /* Sources */,
 				4B5F397A2720E8800094E328 /* Frameworks */,
 				4B5F397B2720E8800094E328 /* Resources */,
-				E3ABE9EA41B8DBF98DFA1ACE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -342,7 +341,6 @@
 				4B5F399C2720E8810094E328 /* Sources */,
 				4B5F399D2720E8810094E328 /* Frameworks */,
 				4B5F399E2720E8810094E328 /* Resources */,
-				C225B85620036F0FF6B74FFF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -469,40 +467,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C225B85620036F0FF6B74FFF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AllTrails-AllTrailsUITests/Pods-AllTrails-AllTrailsUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AllTrails-AllTrailsUITests/Pods-AllTrails-AllTrailsUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AllTrails-AllTrailsUITests/Pods-AllTrails-AllTrailsUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E3ABE9EA41B8DBF98DFA1ACE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AllTrails/Pods-AllTrails-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AllTrails/Pods-AllTrails-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AllTrails/Pods-AllTrails-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FC31B22B9E16D2D2175B3595 /* [CP] Check Pods Manifest.lock */ = {
