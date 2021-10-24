@@ -20,6 +20,8 @@ class ViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var toggleListMapButton: UIButton!
     @IBOutlet private weak var mapView: MKMapView!
+    @IBOutlet private weak var redoSearchButton: UIButton!
+    
     
     private var subscriptions = Set<AnyCancellable>()
     private var listButtonTitle = NSLocalizedString("List", comment: "A list view of search results")
@@ -148,6 +150,7 @@ class ViewController: UIViewController {
     
     private func loadNearbyRestaurants() {
         guard let location = locationManager.location else { return }
+        redoSearchButton.isHidden = true
         viewModel.loadNearbyRestaurants(for: location, radius: currentRadius, searchKeyword: searchBar.text)
     }
     
@@ -187,6 +190,14 @@ class ViewController: UIViewController {
         showMapView.toggle()
     }
     
+    @IBAction func didTapRedoSearch() {
+        let latitude = mapView.centerCoordinate.latitude
+        let longitude = mapView.centerCoordinate.longitude
+        let location = CLLocation(latitude: latitude, longitude: longitude)
+        viewModel.loadNearbyRestaurants(for: location, radius: currentRadius, searchKeyword: searchBar.text)
+        redoSearchButton.isHidden = true
+    }
+    
     func startTracking() {
         if let userLocation = locationManager.location?.coordinate {
             let viewRegion = MKCoordinateRegion(center: userLocation,
@@ -205,6 +216,11 @@ class ViewController: UIViewController {
     }
 }
 
-class CustomSearchBar: UISearchBar {
-    
+// MARK: - MapView extension
+
+// Included in main file to access private var redo search button
+extension ViewController {
+    func mapViewDidChangeVisibleRegion(_ mapView: MKMapView) {
+        redoSearchButton.isHidden = false
+    }
 }

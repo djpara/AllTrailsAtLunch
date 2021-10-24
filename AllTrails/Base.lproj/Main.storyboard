@@ -125,6 +125,31 @@
                                     <action selector="didTapListMapButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="hrK-hl-uPW"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1N8-xS-FFJ">
+                                <rect key="frame" x="105.66666666666669" y="209" width="179" height="31"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="0.80116221450000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="R4i-xf-YKy"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="179" id="sIv-cd-hZC"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Redo search in this area"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666669999997" alpha="0.80116221450000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapRedoSearch" destination="BYZ-38-t0r" eventType="touchUpInside" id="FcK-Vd-682"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -136,17 +161,20 @@
                             <constraint firstItem="FOt-Pt-TM5" firstAttribute="top" secondItem="PA6-rc-0Wv" secondAttribute="bottom" id="9JD-dG-tD6"/>
                             <constraint firstItem="PA6-rc-0Wv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="BVc-Qq-l2o"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FOt-Pt-TM5" secondAttribute="trailing" id="EQY-4U-D9T"/>
+                            <constraint firstItem="1N8-xS-FFJ" firstAttribute="top" secondItem="PA6-rc-0Wv" secondAttribute="bottom" constant="47" id="Kg5-6k-rkY"/>
                             <constraint firstItem="PA6-rc-0Wv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KuV-Cb-jCj"/>
                             <constraint firstItem="sNm-GO-JeL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="L1g-0Q-Eft"/>
                             <constraint firstItem="sNm-GO-JeL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="a63-3z-Tnr"/>
                             <constraint firstItem="YGN-er-dHR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cAO-DH-qFr"/>
                             <constraint firstAttribute="bottom" secondItem="FOt-Pt-TM5" secondAttribute="bottom" id="cEO-gz-0em"/>
+                            <constraint firstItem="1N8-xS-FFJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cFi-2V-nah"/>
                             <constraint firstItem="sNm-GO-JeL" firstAttribute="top" secondItem="PA6-rc-0Wv" secondAttribute="bottom" id="qBV-Qk-PTK"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="filterButton" destination="xHu-lz-406" id="mUp-q2-b7k"/>
                         <outlet property="mapView" destination="FOt-Pt-TM5" id="1hM-yc-qEh"/>
+                        <outlet property="redoSearchButton" destination="1N8-xS-FFJ" id="iWc-DI-9mq"/>
                         <outlet property="searchBar" destination="j6E-4S-EhZ" id="uSG-ic-5Ba"/>
                         <outlet property="tableView" destination="sNm-GO-JeL" id="Uw9-mF-Afm"/>
                         <outlet property="toggleListMapButton" destination="YGN-er-dHR" id="p11-9L-8o8"/>
