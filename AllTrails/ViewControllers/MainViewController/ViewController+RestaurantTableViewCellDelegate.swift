@@ -9,7 +9,10 @@ import Foundation
 
 extension ViewController: RestaurantTableViewCellDelegate {
     func cell(_ restaurantTableViewCell: RestaurantTableViewCell, didMakeFavorite restaurant: Restaurant) {
-        restaurant.isFavorite.toggle()
-        r
+        viewModel.favoritesService.saveToFavorites(restaurant: restaurant)
+    }
+    
+    func cell(_ restaurantTableViewCell: RestaurantTableViewCell, didRemoveFromFavorites restaurant: Restaurant) {
+        viewModel.favoritesService.removeFromFavorites(restaurant: restaurant)
     }
 }

@@ -6,3 +6,13 @@
 //
 
 import Foundation
+import UIKit
+
+extension ViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let currentLocation = locationManager.location else { return }
+        viewModel.loadNearbyRestaurants(for: currentLocation, radius: currentRadius, searchKeyword: searchBar.text)
+        refresh()
+        searchBar.resignFirstResponder()
+    }
+}
